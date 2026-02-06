@@ -89,6 +89,7 @@ Key Code Highlights
 •	Route Fetching
  
  const fetchRoute = async (profile) => {
+        
         const url = `https://api.mapbox.com/directions/v5/mapbox/${profile}/${origin.join(",",)};${destination.join(",")}?geometries=geojson&access_token=${mapboxgl.accessToken}`;
   
             const res = await fetch(url);
