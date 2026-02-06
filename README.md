@@ -89,27 +89,27 @@ Key Code Highlights
 •	Route Fetching
  
  const fetchRoute = async (profile) => {
-        const url = 
-        `https://api.mapbox.com/directions/v5/mapbox/${profile}/${origin.join(",",)};${destination.join(",")}?geometries=geojson&access_token=${mapboxgl.accessToken}`;
+        const url = `https://api.mapbox.com/directions/v5/mapbox/${profile}/${origin.join(",",)};${destination.join(",")}?geometries=geojson&access_token=${mapboxgl.accessToken}`;
   
-        const res = await fetch(url);
+            const res = await fetch(url);
         const data = await res.json();
         
         return data.routes[0];
-};
+      };
 
 •	POI Query
 
-const getPoIdata = async (lng, lat) => {
-      const url = `https://api.mapbox.com/v4/mapbox.mapbox-streets-v8/tilequery/${lng},${lat}.json?radius=300&access_token=${mapboxgl.accessToken}`;
-            const res = await fetch(url);
-            const data = await res.json();
-            data.features.map((v) => console.log(v.properties.type));
-            if (toggle) {
-              return data.features.filter((f) => f.properties.type === toggle);
-            }
 
-            return data.features;
+      const getPoIdata = async (lng, lat) => {
+        const url = `https://api.mapbox.com/v4/mapbox.mapbox-streets-v8/tilequery/${lng},${lat}.json?radius=300&access_token=${mapboxgl.accessToken}`;
+              const res = await fetch(url);
+              const data = await res.json();
+              data.features.map((v) => console.log(v.properties.type));
+              if (toggle) {
+                  return data.features.filter((f) => f.properties.type === toggle);
+              }
+              
+              return data.features;
           };
 
 •	Requires a valid Mapbox Access Token.
