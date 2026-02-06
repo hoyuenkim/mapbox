@@ -91,10 +91,8 @@ Key Code Highlights
  const fetchRoute = async (profile) => {
         
         const url = `https://api.mapbox.com/directions/v5/mapbox/${profile}/${origin.join(",",)};${destination.join(",")}?geometries=geojson&access_token=${mapboxgl.accessToken}`;
-  
-            const res = await fetch(url);
+        const res = await fetch(url);
         const data = await res.json();
-        
         return data.routes[0];
       };
 
