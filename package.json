@@ -1,0 +1,23 @@
+{
+  "name": "mapbox",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next -p 3060"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mapbox/mapbox-gl-directions": "^4.3.1",
+    "@mui/material": "^7.3.7",
+    "@turf/turf": "^7.3.3",
+    "dotenv": "^17.2.3",
+    "mapbox-gl": "^3.18.1",
+    "next": "^16.1.6"
+  }
+}
