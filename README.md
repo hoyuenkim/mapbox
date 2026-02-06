@@ -68,7 +68,7 @@ Dependencies
 
 Installation
 1.	Prerequisite; node.js, npm should be installed on your device
-2.	Unzip mapbox.zip into your project directory
+2.	Pull https://github.com/hoyuenkim/mapbox
 3.	npm install 
 4.	Set up environment variables:
 Create a .env.local file in the root directory and add your Mapbox access token:
